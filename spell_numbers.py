@@ -37,8 +37,8 @@ def num2text(number):
         elif i == 4 and sum(addend[i - 1: i + 1]) / 1000 not in numb2:
             spell[i] = numb.get(addend[i] / 1000)
 
-        if i == 5 and sum(addend[i - 1: i + 1]) / 1000 in numb3:
-            spell[i] = numb3.get(addend[i] / 1000) + " тысяч"
+        if i == 5 and sum(addend[i - 2: i + 1]) / 1000 in numb3:
+            spell[i] = numb3.get(addend[i] / 1000) + " тысяч1"
 
         elif i == 5:
             spell[i] = numb.get(addend[i] / 1000)
@@ -51,4 +51,4 @@ def num2text(number):
     return text
 
 
-print(num2text(12220))
+print(num2text(115220))
